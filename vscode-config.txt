@@ -1,0 +1,34 @@
+{
+  "files.exclude": {
+    "**/*.js": {
+      "when": "$(basename).ts"
+    },
+    "**/*.js.map": {
+      "when": "$(basename)"
+    }
+    // "node_modules": true
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "atomKeymap.promptV3Features": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.formatOnPaste": true,
+  "editor.fontLigatures": true,
+  "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
+  "editor.fontSize": 15,
+  "window.zoomLevel": 1.25,
+  "workbench.colorTheme": "Material Night Eighties",
+  "editor.formatOnSave": true,
+  "workbench.startupEditor": "newUntitledFile",
+  "prettier.singleQuote": true,
+  "git.enableSmartCommit": true,
+  "gitlens.advanced.messages": {
+    "suppressCommitHasNoPreviousCommitWarning": false,
+    "suppressCommitNotFoundWarning": false,
+    "suppressFileNotUnderSourceControlWarning": false,
+    "suppressGitVersionWarning": false,
+    "suppressLineUncommittedWarning": false,
+    "suppressNoRepositoryWarning": false,
+    "suppressUpdateNotice": false,
+    "suppressWelcomeNotice": true
+  }
+}
