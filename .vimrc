@@ -32,6 +32,7 @@ Plugin 'ryanoasis/vim-devicons'
 Plugin 'Yggdroot/indentLine'
 Plugin 'terryma/vim-multiple-cursors'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'arcticicestudio/nord-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin on    " required
@@ -48,6 +49,7 @@ set wildignore+=*/node_modules/*
 let base16colorspace=256
 set termguicolors
 colorscheme base16-material
+" colorscheme nord
 
 set background=dark
 set cursorline
@@ -55,7 +57,8 @@ set showmatch
 set hlsearch
 set nu! "Line Numbering 'on'
 let g:airline#extensions#tabline#enabled = 1
-set encoding=utf8
+set encoding=utf-8
+set arabicshape
 set guifont=UbuntuMonoDerivativePowerline\ Nerd\ Font\ 16
 set t_Co=256
 set completefunc=emoji#complete
