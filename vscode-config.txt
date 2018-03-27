@@ -1,22 +1,21 @@
 {
-  "files.exclude": {
-    "**/*.js": {
-      "when": "$(basename).ts"
-    },
-    "**/*.js.map": {
-      "when": "$(basename)"
-    }
-    // "node_modules": true
-  },
-  "workbench.iconTheme": "material-icon-theme",
+  // "files.exclude": {
+  //   "**/*.js": {
+  //     "when": "$(basename).ts"
+  //   },
+  //   "**/*.js.map": {
+  //     "when": "$(basename)"
+  //   }
+  //   // "node_modules": true
+  // },
   "atomKeymap.promptV3Features": true,
   "editor.multiCursorModifier": "ctrlCmd",
   "editor.formatOnPaste": true,
   "editor.fontLigatures": true,
   "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
-  "editor.fontSize": 15,
-  "window.zoomLevel": 1.25,
-  "workbench.colorTheme": "Material Night Eighties",
+  "editor.fontSize": 14,
+  "window.zoomLevel": 2,
+  "workbench.colorTheme": "Adapta Nokto",
   "editor.formatOnSave": true,
   "workbench.startupEditor": "newUntitledFile",
   "prettier.singleQuote": true,
@@ -30,5 +29,13 @@
     "suppressNoRepositoryWarning": false,
     "suppressUpdateNotice": false,
     "suppressWelcomeNotice": true
-  }
+  },
+  "window.menuBarVisibility": "toggle",
+  "workbench.statusBar.visible": true,
+  "workbench.activityBar.visible": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "gitlens.keymap": "alternate",
+  "window.restoreWindows": "folders",
+  "workbench.sideBar.location": "left",
+  "editor.minimap.enabled": false
 }
