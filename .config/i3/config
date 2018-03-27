@@ -18,8 +18,6 @@ set $outer 10
 gaps inner $inner
 gaps outer $outer
 
-workspace 10 gaps inner 60
-workspace 10 gaps outer 20
 
 # gap toggle
 bindsym $mod+g exec compton; gaps inner all set $inner; gaps outer all set $outer
@@ -28,6 +26,12 @@ bindsym $mod+Control+g exec pkill compton; gaps inner all set 0; gaps outer all 
 smart_borders on
 smart_gaps on
 
+workspace 10 gaps inner 60
+workspace 10 gaps outer 20
+workspace 1 gaps inner 60
+workspace 1 gaps outer 20
+workspace 6 gaps inner 40
+workspace 6 gaps outer 20
 # colors
 set $black      #000000
 set $white	#ffffff
@@ -36,7 +40,7 @@ set $mediumgrey #252525
 set $darkgrey	#1b1d1e
 set $blue       #0087af
 set $red     #BF616A 
-bet $dull       #333333
+set $dull       #333333
 set $sharp      #5E81AC
 
 # window		    border	background      text        indicator
@@ -212,7 +216,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 #Applications
-set $music spotify-wrapper.sh --force-device-scale-factor=1.35
+set $music spotify-adkiller-dns-block --force-device-scale-factor=1.35
 set $browser google-chrome-beta --force-device-scale-factor=1.355
 set $app google-chrome-beta --app
 #set $browser firefox
@@ -221,6 +225,7 @@ set $app google-chrome-beta --app
 #assign [class="Google-chrome-beta"] 2
 assign [instance="youtube.com"] 3
 assign [class="Code"] 4
+assign [class="Spotify"] 6
 #Application Bindings
 bindsym $mod+n exec $browser
 bindsym $mod+Shift+n exec $browser --incognito
