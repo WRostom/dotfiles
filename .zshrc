@@ -100,8 +100,9 @@ fpath=($fpath "/home/wrostom/.zfunctions")
 BASE16_SHELL=$HOME/.config/base16-shell/
 [ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/wrostom/GCloud/google-cloud-sdk/path.zsh.inc' ]; then source '/home/wrostom/GCloud/google-cloud-sdk/path.zsh.inc'; fi
+ #The next line updates PATH for the Google Cloud SDK.
+#if [ -f '/home/wrostom/GCloud/google-cloud-sdk/path.zsh.inc' ]; then source '/home/wrostom/GCloud/google-cloud-sdk/path.zsh.inc'; fi
 
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/wrostom/GCloud/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/wrostom/GCloud/google-cloud-sdk/completion.zsh.inc'; fi
+ #The next line enables shell command completion for gcloud.
+#if [ -f '/home/wrostom/GCloud/google-cloud-sdk/completion.zsh.inc' ]; then source '/home/wrostom/GCloud/google-cloud-sdk/completion.zsh.inc'; fi
+
