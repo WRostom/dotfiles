@@ -13,7 +13,7 @@ for_window [class="^.*"] border pixel 2
 
 # gaps
 set $inner 15
-set $outer 20
+set $outer 0
 
 gaps inner $inner
 gaps outer $outer
@@ -29,11 +29,11 @@ smart_borders on
 smart_gaps on
 
 workspace 10 gaps inner 60
-workspace 10 gaps outer 20
+workspace 10 gaps outer $outer
 workspace 1 gaps inner 60
-workspace 1 gaps outer 20
+workspace 1 gaps outer $outer
 workspace 6 gaps inner 40
-workspace 6 gaps outer 20
+workspace 6 gaps outer $outer
 # colors
 set $black      #000000
 set $white	#ffffff
@@ -74,6 +74,7 @@ font pango:Share Tech Mono Regular 12
 floating_modifier $mod
 
 # start a terminal
+#bindsym $mod+Return exec tilix
 bindsym $mod+Return exec tilix
 bindsym $mod+Shift+Return exec tilix -w `xcwd`
 
@@ -163,6 +164,8 @@ bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Control+Shift+Left move container to workspace prev
+bindsym $mod+Control+Shift+Right move container to workspace next
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -203,13 +206,16 @@ bindsym --release $mod+Print exec gnome-screenshot
 bindsym --release $mod+Control+Print exec gnome-screenshot --interactive
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id amixer sset Master 5%+ 
+ #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id amixer sset Master 5%- #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec light -lA 5 # increase screen brightness
-bindsym XF86MonBrightnessDown exec light -lU 5 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec light -lA 3 # increase screen brightness
+bindsym XF86MonBrightnessDown exec light -lU 3 # decrease screen brightness
 
 # Touchpad controls
 #bindsym XF86TouchpadToggle exec /some/path/toggletouchpad.sh # toggle touchpad
@@ -228,9 +234,10 @@ set $app google-chrome-beta --app
 
 #Application Rules
 #assign [class="Google-chrome-beta"] 2
-assign [instance="youtube.com"] 3
+assign [class="Google-chrome-beta" instance="youtube.com"] 3
 assign [class="Code"] 4
 assign [class="Spotify"] 6
+assign [class="Google Play Music Desktop Player"] 6
 #Application Bindings
 bindsym $mod+n exec $browser
 bindsym $mod+Shift+n exec $browser --incognito
